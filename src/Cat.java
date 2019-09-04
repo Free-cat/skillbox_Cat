@@ -5,6 +5,7 @@ public class Cat
     public static final double MIN_WEIGHT = 1000.0;
 
     public static int catsCount;
+
     private double originWeight;
     private double weight;
 
@@ -28,6 +29,17 @@ public class Cat
         this();
         this.weight = weight;
         originWeight = weight;
+    }
+
+    public Cat(Cat cloneable){
+        this.weight = cloneable.getWeight();
+        this.originWeight = cloneable.getOriginWeight();
+        this.color = cloneable.getColor();
+        this.eatAmount = cloneable.getEatAmount();
+    }
+
+    public Cat cloneCat(){
+        return new Cat(this);
     }
 
     public void crap(){
@@ -54,6 +66,10 @@ public class Cat
     {
         weight = weight + amount;
         checkCatStatus();
+    }
+
+    public double getOriginWeight() {
+        return originWeight;
     }
 
     public CatColor getColor() {
