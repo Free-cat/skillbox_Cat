@@ -63,5 +63,12 @@ public class Loader
         System.out.println("Создадим кошку с весом 5 кг.");
         Cat catWeightConstructorTest = new Cat(5000.0);
         System.out.println("Вес кошки " + catWeightConstructorTest.getWeight());
+
+        // ===========================================================================
+        System.out.println("\n===========================================");
+        Cat catTestColorGetterSetter = new Cat();
+        System.out.println("Укажем кошке цвет черный");
+        catTestColorGetterSetter.setColor(CatColor.BLACK);
+        System.out.println("Теперь цвет кошки: " + catTestColorGetterSetter.getColor());
     }
 }
