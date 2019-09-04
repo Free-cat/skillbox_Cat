@@ -70,5 +70,20 @@ public class Loader
         System.out.println("Укажем кошке цвет черный");
         catTestColorGetterSetter.setColor(CatColor.BLACK);
         System.out.println("Теперь цвет кошки: " + catTestColorGetterSetter.getColor());
+
+        // ===========================================================================
+        System.out.println("\n===========================================");
+        Cat catTestCloneable = new Cat();
+        System.out.println("Вес оригинальной кошки " + catTestCloneable.getWeight());
+        Cat catTestClone = catTestCloneable.cloneCat();
+        System.out.println("Вес копии кошки " + catTestClone.getWeight());
+        System.out.println("Покормим оригинальную кошку");
+        catTestCloneable.feed(1000 + (double) (Math.random() * 3000));
+        System.out.println("Вес оригинальной кошки " + catTestCloneable.getWeight());
+        System.out.println("Вес копии кошки " + catTestClone.getWeight());
+        System.out.println("Покормим копию кошки");
+        catTestClone.feed(1000 + (double) (Math.random() * 3000));
+        System.out.println("Вес оригинальной кошки " + catTestCloneable.getWeight());
+        System.out.println("Вес копии кошки " + catTestClone.getWeight());
     }
 }
