@@ -3,10 +3,6 @@ public class Loader
 {
     public static void main(String[] args)
     {
-//        Cat cat = new Cat();
-//        System.out.println(cat.getWeight());
-//        cat.feed((double) 1000);
-//        System.out.println(cat.getWeight());
         for (int i = 1; i < 8; i++){
             Cat cat = new Cat();
             System.out.println("===========================================");
