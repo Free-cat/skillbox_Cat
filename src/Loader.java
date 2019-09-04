@@ -32,9 +32,10 @@ public class Loader
                 System.out.println("\nКошка мяучила " + meowCount + " раз и она умерла");
             }
         }
-        System.out.println("\n\nПри испытаниях ни одна реальная кошка не постарадла, это всего-лишь фантазия автора");
+        System.out.println("\nПри испытаниях ни одна реальная кошка не постарадла, это всего-лишь фантазия автора");
 
         // ===========================================================================
+        System.out.println("\n===========================================");
         Cat cat = new Cat();
         System.out.println("Вес кошки " + cat.getWeight());
         cat.feed(1000 + (double) (Math.random() * 3000));
@@ -43,5 +44,12 @@ public class Loader
         System.out.println("Вес кошки " + cat.getWeight());
         cat.crap();
         System.out.println("Вес кошки " + cat.getWeight());
+
+        // ===========================================================================
+        System.out.println("\n===========================================");
+        System.out.println("Всего живых кошек: " + Cat.getCatsCount());
+        System.out.println("Создадим кошку и проверим их количество");
+        Cat catTestCount = new Cat();
+        System.out.println("Всего живых кошек: " + Cat.getCatsCount());
     }
 }
