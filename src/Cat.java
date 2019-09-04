@@ -22,6 +22,12 @@ public class Cat
         catsCount = catsCount + 1;
     }
 
+    public Cat(double weight){
+        this();
+        this.weight = weight;
+        originWeight = weight;
+    }
+
     public void crap(){
         weight = weight - 10;
         System.out.println("Кошка сходила в туалет");
