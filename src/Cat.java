@@ -8,6 +8,8 @@ public class Cat
     private double originWeight;
     private double weight;
 
+    private CatColor color;
+
     private double eatAmount;
 
     public static int getCatsCount() {
@@ -52,6 +54,14 @@ public class Cat
     {
         weight = weight + amount;
         checkCatStatus();
+    }
+
+    public CatColor getColor() {
+        return color;
+    }
+
+    public void setColor(CatColor color) {
+        this.color = color;
     }
 
     public double getEatAmount() {
