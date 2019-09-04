@@ -57,5 +57,11 @@ public class Loader
         System.out.println("\n===========================================");
         System.out.println("Минимальный вес кошки: " + Cat.MIN_WEIGHT + " Максимальный вес кошки: " + Cat.MAX_WEIGHT);
         System.out.println("Цвета кошек: " + Arrays.toString(CatColor.values()));
+
+        // ===========================================================================
+        System.out.println("\n===========================================");
+        System.out.println("Создадим кошку с весом 5 кг.");
+        Cat catWeightConstructorTest = new Cat(5000.0);
+        System.out.println("Вес кошки " + catWeightConstructorTest.getWeight());
     }
 }
