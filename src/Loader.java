@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class Loader
 {
@@ -51,5 +52,10 @@ public class Loader
         System.out.println("Создадим кошку и проверим их количество");
         Cat catTestCount = new Cat();
         System.out.println("Всего живых кошек: " + Cat.getCatsCount());
+
+        // ===========================================================================
+        System.out.println("\n===========================================");
+        System.out.println("Минимальный вес кошки: " + Cat.MIN_WEIGHT + " Максимальный вес кошки: " + Cat.MAX_WEIGHT);
+        System.out.println("Цвета кошек: " + Arrays.toString(CatColor.values()));
     }
 }
