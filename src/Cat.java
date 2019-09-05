@@ -25,29 +25,45 @@ public class Cat
     }
 
     public void crap(){
+        if (catIsDead()){
+            System.out.println("Мертвая кошка не может ходить в туалет :'( ");
+            return;
+        }
         weight = weight - 10;
         System.out.println("Кошка сходила в туалет");
-        checkCatStatus();
+        catsCountCheckDead();
     }
 
     public void meow()
     {
+        if (catIsDead()){
+            System.out.println("Мертвые кошки не мяукают :'( ");
+            return;
+        }
         weight = weight - 1;
         System.out.print("Meow ");
-        checkCatStatus();
+        catsCountCheckDead();
     }
 
     public void feed(Double amount)
     {
+        if (catIsDead()){
+            System.out.println("Мертвая кошка не может кушать :'(");
+            return;
+        }
         eatAmount += amount;
         weight = weight + amount;
-        checkCatStatus();
+        catsCountCheckDead();
     }
 
     public void drink(Double amount)
     {
+        if (catIsDead()){
+            System.out.println("Мертвая кошка не может пить :'(");
+            return;
+        }
         weight = weight + amount;
-        checkCatStatus();
+        catsCountCheckDead();
     }
 
     public double getEatAmount() {
@@ -75,9 +91,13 @@ public class Cat
         }
     }
 
-    private void checkCatStatus(){
-        if (getStatus().equals("Dead") || getStatus().equals("Exploded")){
+    private void catsCountCheckDead(){
+        if (catIsDead()){
             catsCount = catsCount - 1;
         }
+    }
+
+    private boolean catIsDead(){
+        return (weight < minWeight || weight > maxWeight);
     }
 }
