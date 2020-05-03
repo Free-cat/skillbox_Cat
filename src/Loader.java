@@ -60,6 +60,13 @@ public class Loader
 
         // ===========================================================================
         System.out.println("\n===========================================");
+        System.out.println("Всего живых кошек: " + Cat.getCatsCount());
+        System.out.println("Создадим кошку со смертельным весом и проверим их количество");
+        Cat catTestMaxWeigthCount = new Cat(Cat.MAX_WEIGHT + 100);
+        System.out.println("Всего живых кошек: " + Cat.getCatsCount());
+
+        // ===========================================================================
+        System.out.println("\n===========================================");
         System.out.println("Создадим кошку с весом 5 кг.");
         Cat catWeightConstructorTest = new Cat(5000.0);
         System.out.println("Вес кошки " + catWeightConstructorTest.getWeight());

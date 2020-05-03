@@ -19,16 +19,16 @@ public class Cat
 
     public Cat()
     {
-        weight = 1500.0 + 3000.0 * Math.random();
-        originWeight = weight;
-        eatAmount = 0;
-        catsCount = catsCount + 1;
+        this(1500.0 + 3000.0 * Math.random());
     }
 
     public Cat(double weight){
-        this();
         this.weight = weight;
-        originWeight = weight;
+        if (!catIsDead()){
+            originWeight = weight;
+            eatAmount = 0;
+            catsCount = catsCount + 1;
+        }
     }
 
     public Cat(Cat cloneable){
@@ -128,6 +128,6 @@ public class Cat
     }
 
     private boolean catIsDead(){
-        return (weight < minWeight || weight > maxWeight);
+        return (weight < MIN_WEIGHT || weight > MAX_WEIGHT);
     }
 }
