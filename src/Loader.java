@@ -80,7 +80,9 @@ public class Loader
 
         // ===========================================================================
         System.out.println("\n===========================================");
+        System.out.println("Всего живых кошек: " + Cat.getCatsCount());
         Cat catTestCloneable = new Cat();
+        System.out.println("Всего живых кошек: " + Cat.getCatsCount());
         System.out.println("Вес оригинальной кошки " + catTestCloneable.getWeight());
         Cat catTestClone = catTestCloneable.cloneCat();
         System.out.println("Вес копии кошки " + catTestClone.getWeight());

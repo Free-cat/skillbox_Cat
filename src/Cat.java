@@ -32,7 +32,7 @@ public class Cat
     }
 
     public Cat(Cat cloneable){
-        this.weight = cloneable.getWeight();
+        this(cloneable.getWeight());
         this.originWeight = cloneable.getOriginWeight();
         this.color = cloneable.getColor();
         this.eatAmount = cloneable.getEatAmount();
